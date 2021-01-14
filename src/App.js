@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Profil } from './profil/Profil';
+import picture from './NesrineProfil.jpg';
+import picdefault from './default.jpg'
 
 function App() {
+  function handleName(on){
+    alert(`your name is ${on}` )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container">
+        <h2>Use of props with parametrs</h2>
+          <Profil FullName='Nesrine Jallouli' Bio='Cité Hédi Nouira Borj Louzir Ariana' Profession='Student in GO MY CODE' handleName={handleName}>
+              <img src={picture} alt='photo de profil' width="250px"/>
+              
+          </Profil>
+          
+        </div>
+          
+          <hr/>
+          <div className="container">
+            <h2>Use of props with default parametrs</h2>
+          <Profil handleName={handleName}>
+          <img src={picdefault} alt='photo de profil' width="250px"/>
+          </Profil>
+          </div>
+          
+          
+
+          
     </div>
   );
 }
