@@ -21,10 +21,16 @@ Profil.defaultProps = {
     Profession : "Default profession",
    };
 Profil.prototype={
-   FullName: PropTypes.string,
-   Bio: PropTypes.string,
-   Profession:PropTypes.string,
-   children: PropTypes.element.isRequired,
-   handleName:PropTypes.func
+    Profil: PropTypes.shape({
+        FullName: PropTypes.number.isRequired,
+        Bio: PropTypes.string.isRequired,
+        Profession:PropTypes.string.isRequired,
+        children: PropTypes.element.isRequired,
 
+
+    }), 
+   handleName:PropTypes.func.isRequired
 };
+
+
+

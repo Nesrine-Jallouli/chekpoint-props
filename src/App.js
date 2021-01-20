@@ -14,8 +14,7 @@ function App() {
         <div className="container">
         <h2>Use of props with parametrs</h2>
           <Profil FullName='Nesrine Jallouli' Bio='Cité Hédi Nouira Borj Louzir Ariana' Profession='Student in GO MY CODE' handleName={handleName}>
-              <img src={picture} alt='photo de profil' width="250px"/>
-              
+              <img src={picture} alt='photo de profil' width="250px"/>  
           </Profil>
           
         </div>
@@ -26,11 +25,7 @@ function App() {
           <Profil handleName={handleName}>
           <img src={picdefault} alt='photo de profil' width="250px"/>
           </Profil>
-          </div>
-          
-          
-
-          
+          </div>      
     </div>
   );
 }
